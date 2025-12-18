@@ -1,0 +1,54 @@
+.food-display{
+    margin-top: 30px;
+}
+.food-display h2{
+    font-size: max(2vw,24px);
+    font-weight: 600;
+}
+.food-display-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+    margin-top: 30px;
+    gap: 30px;
+    row-gap: 50px;
+}
+@media (max-width: 750px) {
+    .food-display {
+        margin-top: 1px; /* Adjust top margin for smaller screens */
+    }
+
+    .food-display h2 {
+        font-size: 6.5vw; /* Increase heading size for better readability */
+        text-align: center; /* Center-align the heading */
+        font-weight: 700;
+        color: #262626;
+    }
+
+    .food-display-list {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Column direction for items */
+        gap: 20px; /* Space between items */
+        margin-top: 20px; /* Reduce top margin */
+    }
+
+    .food-display-list-item {
+        width: 70%; /* Set a smaller width for the card */
+        margin: 0 auto; /* Center items */
+        padding: 10px; /* Add padding for better appearance */
+        border: 1px solid #e2e2e2; /* Optional: border for item distinction */
+        border-radius: 8px; /* Rounded corners for a card effect */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+
+    /* Specific styles for the first item */
+    .food-display-list-item:first-child {
+        flex: 1; /* Keep the first item at a default size */
+        margin-bottom: 10px; /* Space below the first item */
+    }
+
+    /* Adjust the remaining items to display in a row */
+    .food-display-list-item:not(:first-child) {
+        display: flex; /* Ensure they stay side by side */
+        flex: 1; /* Each gets equal space */
+    }
+}

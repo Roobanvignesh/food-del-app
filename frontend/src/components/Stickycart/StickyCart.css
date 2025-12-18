@@ -1,0 +1,45 @@
+.sticky-cart {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 20px;
+  }
+  
+  .sticky-cart-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .sticky-cart-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sticky-cart-details p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  
+  .sticky-cart-button {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .sticky-cart-button:hover {
+    background-color: orange;
+  }
+  

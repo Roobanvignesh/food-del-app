@@ -1,0 +1,233 @@
+/* Navbar container styling */
+.navbar { 
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styling */
+.navbar .logo {
+    width: 200px;
+    height: auto; /* Adjust height automatically */
+}
+
+/* Menu container styling */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+/* Menu item styling */
+.navbar-menu a {
+    text-decoration: none; /* Remove default underline */
+    color: #000; /* Black text color */
+    font-size: 18px;
+    position: relative;
+    padding: 10px 15px;
+    border-radius: 5px; /* Rounded corners */
+    transition: color 0.3s, border-bottom 0.3s; /* Smooth transitions */
+}
+
+/* Hover effect for menu items */
+.navbar-menu a:hover {
+    color: #ff5722; /* Orange color on hover */
+}
+
+/* Active link styling */
+.navbar-menu a.active {
+    color: #ff5722; /* Orange text color for active link */
+    border-bottom: 2px solid #ff5722; /* Orange underline for active link */
+}
+
+/* Navbar-right container styling */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjusted gap */
+}
+
+/* Icon styling */
+.navbar-right img {
+    width: 24px; /* Default size */
+    height: auto; /* Maintain aspect ratio */
+    transition: width 0.3s, height 0.3s; /* Smooth transitions */
+}
+
+/* Basket icon styling */
+.navbar-search-icon img, .navbar-right img[src*='basket_icon.png'] {
+    width: 24px; /* Default size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Search icon styling */
+.navbar-right img[src*='search_icon.png'] {
+    width: 24px; /* Default size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Button styling */
+.navbar button {
+    background: transparent;
+    font-size: 16px;
+    color: #000; /* Black text color */
+    border: 1px solid #ff5722; /* Orange border */
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar button:hover {
+    background-color: #fff4f2; /* Light orange background on hover */
+}
+
+/* Search icon container */
+.navbar-search-icon {
+    position: relative;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: #ff5722; /* Orange dot */
+    border-radius: 50%;
+    top: -8px;
+    right: -8px;
+}
+/* Profile dropdown styling */
+.navbar-profile {
+    position: relative;
+}
+
+.nav-profile-dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid orange;
+    outline: 2px solid white;
+    list-style: none;
+}
+.nav-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+.nav-profile-dropdown img{
+    width: 20px;
+}
+
+/* Responsive adjustments */
+
+/* Responsive adjustments for below 1015px */
+@media (max-width: 1050px) {
+    .navbar {
+        padding: 15px 10px; /* Adjusted padding for better spacing */
+    }
+
+    .navbar .logo {
+        width: 160px; /* Adjust logo size */
+    }
+
+    .navbar-menu {
+        gap: 15px; /* Adjusted gap between menu items */
+        font-size: 17px; /* Slightly smaller font size */
+    }
+
+    .navbar-right {
+        gap: 15px; /* Adjusted gap in the right section */
+    }
+
+    .navbar-right img {
+        width: 22px; /* Adjust icon size */
+    }
+
+    .navbar-right button {
+        padding: 8px 20px; /* Adjusted button padding */
+        font-size: 15px; /* Slightly smaller font size */
+    }
+}
+
+/* Responsive adjustments for below 900px */
+@media (max-width: 1015px) {
+    .navbar .logo {
+        width: 140px; /* Further reduce logo size */
+    }
+
+    .navbar-menu {
+        gap: 10px; /* Further reduce gap */
+        font-size: 16px; /* Smaller font size */
+        display: none; /* Hide menu by default */
+        flex-direction: column; /* Stack menu items vertically */
+        position: absolute;
+        background-color: #fff; /* Background color */
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        width: 100%; /* Full width for dropdown */
+        z-index: 10; /* Ensure it's on top */
+    }
+
+    .navbar-menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .navbar-right {
+        gap: 10px; /* Further reduce gap */
+    }
+
+    .navbar-right img {
+        width: 20px; /* Further reduce icon size */
+    }
+
+    .navbar-right button {
+        padding: 7px 15px; /* Adjusted button padding */
+        font-size: 14px; /* Smaller font size */
+    }
+}
+/* Mobile view adjustments for below 400px */
+@media (max-width: 400px) {
+    .navbar {
+        padding: 10px 5px; /* Adjusted padding for smaller screens */
+        flex-direction: row; /* Ensure items are in a row */
+        justify-content: space-between; /* Logo on left, menu on right */
+    }
+
+    /* Logo adjustments */
+    .navbar .logo {
+        width: 140px;
+    }
+    /* Adjust icon and button sizes */
+    .navbar-right {
+        gap: 10px; /* Further reduce gap */
+    }
+
+    .navbar-right img {
+        width: 20px; /* Further reduce icon size */
+    }
+
+
+    .navbar-right button {
+        padding: 7px 10px; /* Smaller button padding */
+        font-size: 12px; /* Smaller button text */
+    }
+
+    /* Optional: reduce font size of menu items */
+    .navbar-menu a {
+        font-size: 14px; /* Smaller font size for menu links */
+    }
+}
